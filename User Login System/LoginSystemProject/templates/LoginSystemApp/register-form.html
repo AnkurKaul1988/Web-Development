@@ -1,0 +1,35 @@
+
+{% extends 'LoginSystemApp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body_block %}
+
+<div class="container">
+
+    <div class="form-container border border-primary" style="width: 650px; margin: 200px auto; padding:50px 30px; border-radius:5px;">
+
+        <h2 class="text-center text-primary mb-5">Sign Up</h2>
+
+        <form action="" method="POST" class='' enctype="multipart/form-data">
+          
+            {% for user in user_form %}
+              <div class="form-group">
+                {{user}}
+              </div>   
+              {% csrf_token %}           
+            {% endfor %}
+    
+            {% for profile in profile_form %}
+              <div class="form-group">
+                {{profile}}
+              </div>
+              {% csrf_token %}
+            {% endfor %}             
+    
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>     
+        <p class="mt-4">Already have an account <a href="{% url 'LoginSystemApp:login' %}">Sign In</a></p>  
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+argon2-cffi==21.3.0
+argon2-cffi-bindings==21.2.0
+asgiref @ file:///work/ci_py311/asgiref_1676843199969/work
+bcrypt==4.0.1
+cffi==1.15.1
+Django @ file:///work/ci_py311/django_1676851927387/work
+django-crispy-forms==2.0
+Pillow==9.5.0
+pycparser==2.21
+sqlparse @ file:///work/ci_py311/sqlparse_1676828845822/work
